@@ -1,0 +1,134 @@
+import LeanestEllipse.EllipseCriterion.MainTheorem
+import LeanestEllipse.EllipseCriterion.Feasibility
+import LeanestEllipse.EllipseCriterion.SmoothNullspace
+import LeanestEllipse.EllipseCriterion.SquareCorollaries
+import LeanestEllipse.EllipseCriterion.EarlierClaims
+import LeanestEllipse.EllipseCriterion.FurtherQuestions
+import LeanestEllipse.EllipseCriterion.ConnectedExamples
+import LeanestEllipse.EllipseCriterion.PolygonalExamples
+import LeanestEllipse.EllipseCriterion.UnorientedParametrization
+import LeanestEllipse.EllipseCriterion.MobiusTopology
+import LeanestEllipse.EllipseCriterion.SquareIncidences
+import LeanestEllipse.Analysis.Convex.Ellipsoid.MatrixSpectrum
+import LeanestEllipse.IntegralGeometry.Radon.L1
+import LeanestEllipse.IntegralGeometry.Radon.Moments
+import LeanestEllipse.IntegralGeometry.Radon.FourierSlice
+
+/-!
+# Numbered statement index for the paper
+
+These aliases retain the full types of the original declarations. No hypotheses are
+hidden or strengthened by the index. The README gives the statement-by-statement mapping
+and links the coverage inventory for the article's mathematical prose. Unnumbered mathematical
+assertions added to the index have descriptive aliases.
+-/
+
+namespace LeanestEllipse.Paper
+
+@[inherit_doc Complex.integrable_radonTransform_sphere]
+alias introduction_joint_integrability := Complex.integrable_radonTransform_sphere
+@[inherit_doc Complex.radonTransform_sphere_ae_eq_of_ae_eq]
+alias introduction_representative_independence := Complex.radonTransform_sphere_ae_eq_of_ae_eq
+@[inherit_doc Complex.norm_radonTransformL1_surface_le]
+alias introduction_L1_bound := Complex.norm_radonTransformL1_surface_le
+@[inherit_doc Complex.integral_norm_radonTransform_sphere_surface_le]
+alias introduction_integral_bound := Complex.integral_norm_radonTransform_sphere_surface_le
+
+@[inherit_doc ellipse_criterion]
+alias theorem_1 := ellipse_criterion
+@[inherit_doc ellipse_criterion_compactlyContained]
+alias theorem_1_containment := ellipse_criterion_compactlyContained
+@[inherit_doc ellipse_criterion_witness]
+alias theorem_1_witness := ellipse_criterion_witness
+@[inherit_doc ellipse_criterion_of_isConnected]
+alias remark_2 := ellipse_criterion_of_isConnected
+@[inherit_doc ellipse_criterion_sphere]
+alias remark_2_circle := ellipse_criterion_sphere
+@[inherit_doc ellipse_criterion_polygonalChain]
+alias remark_2_polygonalChain := ellipse_criterion_polygonalChain
+@[inherit_doc ellipse_criterion_polygon_boundary]
+alias remark_2_convex_polygon := ellipse_criterion_polygon_boundary
+@[inherit_doc ellipseSandwich_iff_five_variable_feasibility]
+alias remark_3 := ellipseSandwich_iff_five_variable_feasibility
+@[inherit_doc ellipseSandwich_iff_quadratic_feasibility]
+alias remark_3_all_dimensions := ellipseSandwich_iff_quadratic_feasibility
+@[inherit_doc exists_radial_radonTransform_eq_zero]
+alias lemma_4 := exists_radial_radonTransform_eq_zero
+@[inherit_doc sufficiency]
+alias proposition_5 := sufficiency
+@[inherit_doc sufficiency_linearIndependent]
+alias proposition_5_independent_family := sufficiency_linearIndependent
+@[inherit_doc realSmoothNullspace_eq_bot_or_infinite]
+alias after_proposition_5 := realSmoothNullspace_eq_bot_or_infinite
+@[inherit_doc unoriented_line_transfer]
+alias lemma_6 := unoriented_line_transfer
+@[inherit_doc mobiusLineBundleHomeomorph]
+alias section_2_mobius_bundle := mobiusLineBundleHomeomorph
+@[inherit_doc hardy_model_reduction]
+alias lemma_7 := hardy_model_reduction
+@[inherit_doc exists_common_neutral_subspace]
+alias lemma_8 := exists_common_neutral_subspace
+@[inherit_doc exists_common_neutral_subspace_orthogonalProjection]
+alias lemma_8_projection := exists_common_neutral_subspace_orthogonalProjection
+@[inherit_doc Matrix.exists_center_shape_fin_two]
+alias lemma_9 := Matrix.exists_center_shape_fin_two
+@[inherit_doc Matrix.spectrum_realPart_eq_endpoints_ellipseDisk]
+alias lemma_9_disk := Matrix.spectrum_realPart_eq_endpoints_ellipseDisk
+@[inherit_doc Matrix.posDef_ellipseShape_of_nontrivial]
+alias lemma_9_nondegenerate := Matrix.posDef_ellipseShape_of_nontrivial
+@[inherit_doc Matrix.exists_ellipsoid_eq_ellipseDisk]
+alias lemma_9_ellipse := Matrix.exists_ellipsoid_eq_ellipseDisk
+@[inherit_doc exists_matrix_of_spectrum_gap]
+alias theorem_10 := exists_matrix_of_spectrum_gap
+@[inherit_doc exists_ellipsoid_of_radonVanishesAEOn]
+alias proposition_11 := exists_ellipsoid_of_radonVanishesAEOn
+@[inherit_doc smoothNullExists_openSquare_iff]
+alias corollary_12 := smoothNullExists_openSquare_iff
+@[inherit_doc integrableNullExists_openSquare_iff]
+alias corollary_12_integrable := integrableNullExists_openSquare_iff
+@[inherit_doc ae_eq_zero_of_radonVanishesAEOn_closedSquare]
+alias corollary_13 := ae_eq_zero_of_radonVanishesAEOn_closedSquare
+@[inherit_doc eq_closedBall_of_closedSquare_subset_of_subset_closedSquare]
+alias remark_14 := eq_closedBall_of_closedSquare_subset_of_subset_closedSquare
+@[inherit_doc center_eq_zero_and_shape_eq_id_of_closedSquare_subset_of_subset_closedSquare]
+alias remark_14_center_shape :=
+  center_eq_zero_and_shape_eq_id_of_closedSquare_subset_of_subset_closedSquare
+@[inherit_doc not_smoothNullExists_openSquare_endpoint]
+alias remark_14_smooth_endpoint := not_smoothNullExists_openSquare_endpoint
+@[inherit_doc not_integrableNullExists_openSquare_endpoint]
+alias remark_14_integrable_endpoint := not_integrableNullExists_openSquare_endpoint
+@[inherit_doc unitDisk_not_subset_openSquare]
+alias remark_14_boundary := unitDisk_not_subset_openSquare
+@[inherit_doc square_corners_subset_sphere]
+alias figure_2_corners := square_corners_subset_sphere
+@[inherit_doc unitDisk_inter_frontier_openSquare_eq_sideMidpoints]
+alias figure_2_contacts := unitDisk_inter_frontier_openSquare_eq_sideMidpoints
+@[inherit_doc not_bomanClosedSupportConjecture]
+alias remark_15_conjecture := not_bomanClosedSupportConjecture
+@[inherit_doc not_bomanSymmetricInteriorAssertion]
+alias remark_15_theorem := not_bomanSymmetricInteriorAssertion
+@[inherit_doc exists_positive_tendsto_zero_not_eventually_zero]
+alias remark_15_limit := exists_positive_tendsto_zero_not_eventually_zero
+-- The section_6_* alias names are retained for compatibility.
+-- They refer to "Further questions", Section 7 of the paper.
+@[inherit_doc exists_smooth_odd_radonTransform_eq_zero_through_point]
+alias section_6_point := exists_smooth_odd_radonTransform_eq_zero_through_point
+@[inherit_doc RadonVanishesOn.backprojection_eqOn_zero]
+alias section_6_backprojection := RadonVanishesOn.backprojection_eqOn_zero
+@[inherit_doc eqOn_zero_of_radonVanishesOn_of_local_inversion]
+alias section_6_local_inversion := eqOn_zero_of_radonVanishesOn_of_local_inversion
+
+@[inherit_doc RadonTransform.integral_pow_smul_radonTransform_eq_momentTensor_of_hasCompactSupport]
+alias section_7_moments :=
+  RadonTransform.integral_pow_smul_radonTransform_eq_momentTensor_of_hasCompactSupport
+@[inherit_doc
+  RadonTransform.integral_pow_smul_radonTransform_eq_momentTensor_of_isCompact_essSupport]
+alias section_7_moments_essentialSupport :=
+  RadonTransform.integral_pow_smul_radonTransform_eq_momentTensor_of_isCompact_essSupport
+
+@[inherit_doc radon_inversion_odd]
+alias section_7_inversion := radon_inversion_odd
+@[inherit_doc eqOn_zero_of_radonVanishesOn_of_odd_finrank]
+alias section_7_local_uniqueness := eqOn_zero_of_radonVanishesOn_of_odd_finrank
+
+end LeanestEllipse.Paper
